@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+/* CSS Variables for Colors */
+:root {
+  --bg-color: #edeff1; /* Background color for the body */
+  --form-bg-color: #f3f3f8; /* Background color for the form */
+  --primary-color: #080b0f; /* Primary color for buttons */
+  --primary-color-dark: #9a9c9e; /* Darker shade for hover */
+  --text-color: #333; /* Dark color for text */
+  --label-color: rgb(185, 66, 66); /* Color for labels */
+  --border-color: #ccc; /* Light border color */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Shadow color */
+}
+
+/* Apply Nunito font to the entire application */
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color); /* Light background for contrast */
+}
+
+/* Style for the form container */
+.form-container {
+  max-width: 400px;
+  margin: 100px auto; /* Centering the form vertically and horizontally */
+  padding: 20px;
+  background-color: var(--form-bg-color); /* Light background for the form */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px var(--shadow-color); /* Subtle shadow for depth */
+}
+
+/* Header style */
+h2 {
+  text-align: center;
+  color: var(--text-color); /* Dark color for the heading */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+/* Style for form labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--label-color); /* Keeping the color from previous styles */
+}
+
+/* Input field styles */
+input {
+  width: 100%; /* Full width for input fields */
+  padding: 10px;
+  margin-bottom: 15px; /* Space between input fields */
+  border-radius: 5px;
+  border: 1px solid var(--border-color); /* Light border for input fields */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+/* Input focus state */
+input:focus {
+  border-color: var(--primary-color); /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Button styles */
+button {
+  width: 100%; /* Full width for buttons */
+  padding: 10px;
+  background-color: var(--primary-color); /* Primary color for buttons */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem; /* Larger font size for buttons */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover and active effects */
+  margin-top: 15px; /* Space above the button */
+}
+
+/* Button hover state */
+button:hover {
+  background-color: var(--primary-color-dark); /* Darker shade on hover */
+}
+
+/* Button active state */
+button:active {
+  transform: scale(0.98); /* Slightly scale down on click */
+}
+
+/* Button disabled state */
+button:disabled {
+  background-color: #ccc; /* Gray background for disabled button */
+  cursor: not-allowed; /* Change cursor for disabled state */
+}
+
+/* Center alignment for the form */
+.App {
+  text-align: center;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 480px) {
+  .form-container {
+    width: 90%; /* Make the form responsive on small screens */
+  }
+
+  button {
+    font-size: 0.875rem; /* Adjust button size for smaller screens */
+  }
+
+  input {
+    font-size: 0.875rem; /* Adjust input size for smaller screens */
+  }
+}
